@@ -5,24 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/ICON.jpg" type="image/x-icon">
-    <title>Czyrille Josh C. Reyes | Designer</title>
+    <title>Czyrille Josh C. Reyes | UI/UX Designer & Front-end Developer</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">CJR</div>
-        <nav>
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <div class="logo">CJR</div>
+                <div class="logo-accent"></div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#technical-skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -31,11 +38,21 @@
                 <img src="assets/Home-Page.jpg" alt="Creative workspace">
             </div>
             <div class="hero-content">
+                <p class="hero-intro">Hi, I'm</p>
                 <h1>Czyrille Josh C. Reyes</h1>
                 <div class="divider"></div>
-                <h2>Graphics Designer & UX Designer</h2>
+                <h2>
+                    <span class="role-highlight">Graphics Editor</span>
+                    <span class="role-separator"> | </span>
+                    <span class="role-highlight">UI/UX Designer</span>
+                    <span class="role-separator"> | </span>
+                    <span class="role-highlight">Front-end Developer</span>
+                </h2>
                 <div class="divider"></div>
-                <a href="#portfolio" class="cta-button">View My Work</a>
+                <div class="hero-buttons">
+                    <a href="#projects" class="cta-button">View Projects</a>
+                    <a href="#contact" class="cta-button">Contact Me</a>
+                </div>
             </div>
         </section>
 
@@ -43,87 +60,55 @@
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
-                    <div class="about-image">
-                        <img src="assets/REYES.jpg" alt="Czyrille Josh C. Reyes">
+                    <div class="about-image-wrapper">
+                        <div class="about-image">
+                            <img src="assets/REYES.jpg" alt="Czyrille Josh C. Reyes">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="image-border-glow"></div>
                     </div>
-                    <div class="about-text">
-                        <p>I'm Czyrille Josh C. Reyes, a 20-year-old college student passionate about creating intuitive
-                            and visually engaging digital experiences. I have strong skills in Adobe Photoshop,
-                            Lightroom, and file formats, along with proficiency in Microsoft Office Suite.</p>
-
-                        <p>As an Information Systems student, I’m constantly learning and improving in HTML, CSS, and
-                            PHP—key areas in our field—while also gaining experience in database management using MySQL
-                            and phpMyAdmin.</p>
-
-                        <p>I strive to blend design and functionality to create meaningful digital solutions that not
-                            only look great but also serve a purpose.</p>
-
-                        <div class="skills">
-                            <div class="skill-tag">UI/UX Designer</div>
-                            <div class="skill-tag">Front-end Web Developer</div>
-                            <div class="skill-tag">Adobe Photoshop Proficient</div>
-                            <div class="skill-tag">Collaborative and Adaptable</div>
-                            <div class="skill-tag">Task & Time Management</div>
-                            <div class="skill-tag">Attention to Detail</div>
+                    <div class="about-text-wrapper">
+                        <div class="about-text">
+                            <p>
+                                I am a <span class="highlight-text">Bachelor of Science in Information Systems
+                                    (BSIS)</span> student from the <span class="highlight-text">University of Caloocan
+                                    City</span> with a strong interest in <span class="highlight-text">UI/UX
+                                    design</span>, <span class="highlight-text">front-end web development</span>, and
+                                <span class="highlight-text">digital media</span>.
+                            </p>
+                            <p>
+                                I specialize in creating <span class="highlight-text">responsive, user-centered
+                                    interfaces</span> and strive to deliver visually appealing and functional designs.
+                                Through academic projects and self-directed learning, I continuously enhance my
+                                technical and creative skills to build meaningful digital experiences.
+                            </p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="animate">
-            <div class="container">
-                <h2 class="section-title">Skill Preview</h2>
-                <div class="skills-content">
-                    <div class="skill-area photoshop">
-                        <h3>Adobe Photoshop Skills</h3>
-                        <p>I have strong experience with Adobe Photoshop, focusing on photo manipulation, compositing,
-                            retouching, and creating digital artwork. I enjoy refining visuals and bringing creative
-                            ideas to life through design.</p>
-                        <div class="comparison-slider-wrapper">
-                            <div class="comparison-slider">
-                                <div class="before-image">
-                                    <img src="assets/before-Project 3.jpg" alt="Before Editing">
-                                    <span class="label">BEFORE</span>
+                        <div class="about-highlights">
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
                                 </div>
-                                <div class="after-image">
-                                    <img src="assets/Project 3.jpg" alt="After Editing">
-                                    <span class="label">AFTER</span>
-                                </div>
-                                <div class="slider-handle">
-                                    <span class="handle-line"></span>
+                                <div class="highlight-content">
+                                    <h4>BSIS Student</h4>
+                                    <p>University of Caloocan City</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="skill-highlights">
-                            <div class="highlight">
-                                <h4>Photo Manipulation</h4>
-                                <p>Specializing in enhancing portraits, adjusting features, and perfecting color balance
-                                    to create visually striking images.</p>
-                            </div>
-                            <div class="highlight">
-                                <h4>Digital Compositing</h4>
-                                <p>Crafting seamless compositions by merging multiple images into a cohesive, visually
-                                    striking result.</p>
-                            </div>
-                            <div class="highlight">
-                                <h4>Visual Design</h4>
-                                <p>Developing unique graphics, brand identities, and visual elements that communicate
-                                    creativity and purpose.</p>
-                            </div>
-                        </div>
-
-                        <div class="skill-area-lightroom">
-                            <h3>Color Correction with Lightroom & CRF</h3>
-                            <p>I use Adobe Lightroom and Camera Raw Filter (CRF) to enhance photos, focusing on color
-                                correction, exposure adjustments, and creating custom presets. While I'm still refining
-                                my skills, I'm dedicated to improving and achieving consistent, visually appealing
-                                results.</p>
-                            <div class="lightroom-gallery">
-                                <div class="gallery-item"><img src="assets/LR-After.jpg" alt="Lightroom Sample 1">
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fa-solid fa-lightbulb"></i>
                                 </div>
-                                <div class="gallery-item"><img src="assets/LR-Before.jpg" alt="Lightroom Sample 2">
+                                <div class="highlight-content">
+                                    <h4>Self-Learner</h4>
+                                    <p>Continuous Growth</p>
+                                </div>
+                            </div>
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Creative Mind</h4>
+                                    <p>Design & Development</p>
                                 </div>
                             </div>
                         </div>
@@ -132,94 +117,144 @@
             </div>
         </section>
 
-        <section id="ux-design" class="animate">
+        <section id="technical-skills" class="animate">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">UI/UX Design</h2>
-                    <div class="section-divider"></div>
-                </div>
-        
-                <div class="ux-content">
-                    <div class="ux-text">
-                        <p class="ux-intro">Creating intuitive digital experiences where form meets function.</p>
-        
-                        <div class="ux-approach">
-                            <div class="approach-item">
-                                <span class="approach-number">01</span>
-                                <h3>Research & Discovery</h3>
-                                <p>Understanding user needs through thoughtful exploration and analysis.</p>
-                            </div>
-        
-                            <div class="approach-item">
-                                <span class="approach-number">02</span>
-                                <h3>Collaboration & Integration</h3>
-                                <p>Bridging visual design with technical implementation through developer partnerships.</p>
-                            </div>
-        
-                            <div class="approach-item">
-                                <span class="approach-number">03</span>
-                                <h3>Design & Iteration</h3>
-                                <p>Crafting solutions centered on simplicity, accessibility, and meaningful interactions.</p>
-                            </div>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-html5"></i>
                         </div>
+                        <h3>HTML & CSS</h3>
+                        <p>Solid foundation in building structured and responsive web layouts for academic and personal
+                            projects.</p>
+                        <div class="skill-accent"></div>
                     </div>
-        
-                    <div class="preview-grid">
-                        <div class="preview-item">
-                            <img src="assets/Preview.png" alt="Featured UX Project">
-                            <div class="preview-overlay">
-                                <div class="project-info">
-                                    <span class="project-tag">Featured Work</span>
-                                </div>
-                            </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-css3-alt"></i>
                         </div>
+                        <h3>Tailwind CSS</h3>
+                        <p>Experience using utility-first classes to create clean, modern, and responsive user
+                            interfaces.</p>
+                        <div class="skill-accent"></div>
                     </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                        <h3>React.js</h3>
+                        <p>Basic understanding of component-based development and dynamic UI creation through school and
+                            self-practice.</p>
+                        <div class="skill-accent"></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3>MySQL (phpMyAdmin)</h3>
+                        <p>Familiar with basic database management, queries, and connecting databases to web
+                            applications.</p>
+                        <div class="skill-accent"></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3>UI/UX & Responsive Design</h3>
+                        <p>Understanding of user interface and user experience principles, focusing on accessibility,
+                            layout, and mobile responsiveness.</p>
+                        <div class="skill-accent"></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3>Hosting & Deployment</h3>
+                        <p>Basic experience deploying a website and learning how hosting platforms, domains, and servers
+                            work. Currently exploring the fundamentals of web deployment and environment setup.</p>
+                        <div class="skill-accent"></div>
+                    </div>
+
                 </div>
+            </div>
             </div>
         </section>
 
-        <!-- Portfolio Section with Modal -->
-        <section id="portfolio" class="animate">
+        <!-- Projects Section with Modal -->
+        <section id="projects" class="animate">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">Projects / Works</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item" data-modal="modal-1">
-                        <div class="portfolio-image">
-                            <img src="assets/Project 1.jpg" alt="UX Designs">
-                            <div class="portfolio-overlay">
-                                <span>View Project</span>
+                    <div class="portfolio-item" data-modal="modal-posters">
+                        <div class="portfolio-image-wrapper">
+                            <div class="portfolio-image">
+                                <img src="assets/Project 2.jpg" alt="Posters">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>View Project</span>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="portfolio-accent"></div>
                         </div>
                         <div class="portfolio-content">
-                            <h3>UX Designs</h3>
-                            <p>As a web development student, I focus on creating intuitive, user-centered designs that
-                                enhance the overall experience.</p>
+                            <div class="portfolio-icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <h3>Posters</h3>
+                            <p>A collection of visual poster designs showcasing creative compositions and artistic
+                                vision.</p>
                         </div>
                     </div>
-                    <div class="portfolio-item" data-modal="modal-2">
-                        <div class="portfolio-image">
-                            <img src="assets/Project 2.jpg" alt="Visual Posters">
-                            <div class="portfolio-overlay">
-                                <span>View Project</span>
+                    <div class="portfolio-item" data-modal="modal-advertisement">
+                        <div class="portfolio-image-wrapper">
+                            <div class="portfolio-image">
+                                <img src="assets/Project 3.jpg" alt="Advertisement Posters">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>View Project</span>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="portfolio-accent"></div>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Visual Posters</h3>
-                            <p>As a student, I’m passionate about creating visuals and bringing ideas to life through
-                                vibrant designs.</p>
+                            <div class="portfolio-icon">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <h3>Advertisement Posters</h3>
+                            <p>Promotional materials designed to effectively communicate messages and capture audience
+                                attention.</p>
                         </div>
                     </div>
-                    <div class="portfolio-item" data-modal="modal-3">
-                        <div class="portfolio-image">
-                            <img src="assets/Project 3.jpg" alt="Publicity Posters">
-                            <div class="portfolio-overlay">
-                                <span>View Project</span>
+                    <div class="portfolio-item" data-modal="modal-uiux">
+                        <div class="portfolio-image-wrapper">
+                            <div class="portfolio-image">
+                                <img src="assets/Project 1.jpg" alt="UI/UX Designs">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>View Project</span>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="portfolio-accent"></div>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Publicity Posters</h3>
-                            <p>As a student, I’m driven about creating visuals, particularly in promotional posters,
-                                with vibrant, eye-catching designs.</p>
+                            <div class="portfolio-icon">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <h3>UI/UX Designs</h3>
+                            <p>User-centered interface designs focused on creating intuitive and engaging digital
+                                experiences.</p>
                         </div>
                     </div>
                 </div>
@@ -227,80 +262,48 @@
         </section>
 
         <!-- Modal Templates for Each Project -->
-        <div class="modal" id="modal-1">
+        <div class="modal" id="modal-posters">
             <div class="modal-content">
                 <span class="close-modal">&times;</span>
-                <h2>UX Design Projects</h2>
+                <h2>Posters</h2>
                 <div class="modal-description">
-                    <p>As a web development student, I focus on creating intuitive, user-centered designs that enhance
-                        the overall experience. My approach combines research, wireframing, and prototyping to develop
-                        digital products that solve real user problems.</p>
-                    <p>These projects showcase my ability to create functional, aesthetically pleasing interfaces that
-                        prioritize user needs while maintaining visual harmony.</p>
+                    <p>A collection of visual poster designs showcasing creative compositions and artistic vision. Each
+                        piece represents a unique fusion of creativity, technical skill, and visual storytelling.</p>
                 </div>
                 <div class="image-slider">
                     <div class="slider-container">
                         <div class="slide">
-                            <img src="" alt="To be Added :>">
+                            <img src="modals/posters/Weeknd-Poster.jpg" alt="Poster 1">
                         </div>
                         <div class="slide">
-                            <img src="" alt="Honestly idk why u scrolled, To be added too! :>">
-                        </div>
-
-
-
-                    </div>
-                    <button class="slider-button prev">&#10094;</button>
-                    <button class="slider-button next">&#10095;</button>
-                    <div class="slider-dots"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal" id="modal-2">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Visual Poster Collection</h2>
-                <div class="modal-description">
-                    <p>My passion for graphic design comes alive in this collection of visual posters. Each piece
-                        represents a unique fusion of creativity, technical skill, and artistic vision.</p>
-                    <p>These works showcase my proficiency with Adobe Photoshop and my ability to communicate ideas
-                        through compelling visual storytelling and composition.</p>
-                </div>
-                <div class="image-slider">
-                    <div class="slider-container">
-                        <div class="slide">
-                            <img src="Project-Two/Weeknd-Poster.jpg" alt="Visual Poster 1">
+                            <img src="modals/posters/ASAP-Poster.jpg" alt="Poster 2">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/ASAP-Poster.jpg" alt="Visual Poster 2">
+                            <img src="modals/posters/Marias-Poster.jpg" alt="Poster 3">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/Marias-Poster.jpg" alt="Visual Poster 3">
+                            <img src="modals/posters/Ocean-Poster.jpg" alt="Poster 4">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/Ocean-Poster.jpg" alt="Visual Poster 4">
+                            <img src="modals/posters/Travis-Poster1.jpg" alt="Poster 5">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/Travis-Poster1.jpg" alt="Visual Poster 5">
+                            <img src="modals/posters/Travis-Poster2.jpg" alt="Poster 6">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/Travis-Poster2.jpg" alt="Visual Poster 6">
+                            <img src="modals/posters/Laufey-Poster.jpg" alt="Poster 7">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/Laufey-Poster.jpg" alt="Visual Poster 7">
+                            <img src="modals/posters/Khalid-Poster.jpg" alt="Poster 8">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/Khalid-Poster.jpg" alt="Visual Poster 8">
+                            <img src="modals/posters/Eilish-1.jpg" alt="Poster 9">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/Eilish-1.jpg" alt="Visual Poster 9">
+                            <img src="modals/posters/YE-1.jpg" alt="Poster 10">
                         </div>
                         <div class="slide">
-                            <img src="Project-Two/YE-1.jpg" alt="Visual Poster 10">
-                        </div>
-                        <div class="slide">
-                            <img src="Project-Two/Weeknd-1.jpg" alt="Visual Poster 1    ">
+                            <img src="modals/posters/Weeknd-1.jpg" alt="Poster 11">
                         </div>
                     </div>
                     <button class="slider-button prev">&#10094;</button>
@@ -310,48 +313,55 @@
             </div>
         </div>
 
-        <div class="modal" id="modal-3">
+        <div class="modal" id="modal-advertisement">
             <div class="modal-content">
                 <span class="close-modal">&times;</span>
-                <h2>Publicity Campaign Materials</h2>
+                <h2>Advertisement Posters</h2>
                 <div class="modal-description">
-                    <p>These publicity posters demonstrate my ability to create eye-catching promotional materials that
-                        effectively communicate key messages to target audiences.</p>
-                    <p>Each design incorporates strategic use of color, typography, and composition to capture attention
-                        and convey information in a visually compelling way, reflecting my understanding of design
-                        principles and marketing objectives.</p>
+                    <p>Promotional materials designed to effectively communicate messages and capture audience
+                        attention. Each design incorporates strategic use of color, typography, and composition to
+                        convey information in a visually compelling way.</p>
                 </div>
                 <div class="image-slider">
                     <div class="slider-container">
                         <div class="slide">
-                            <img src="Project-Three/Mochi-Poster.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/Mochi-Poster.jpg" alt="Advertisement Poster 1">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/MIB-Poster.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/CraftShow-Poster.jpg" alt="Advertisement Poster 2">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/CraftShow-Poster.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/Off White Design.jpg" alt="Advertisement Poster 3">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/Off White Design.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/LBJ-Poster.jpg" alt="Advertisement Poster 4">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/LBJ-Poster.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/Ja-Morant-Poster.jpg" alt="Advertisement Poster 5">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/Ja-Morant-Poster.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/Jordan-Poster.jpg" alt="Advertisement Poster 6">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/Jordan-Poster.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/Jordan2-Poster.jpg" alt="Advertisement Poster 7">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/Truman-Poster.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/Truman-Poster.jpg" alt="Advertisement Poster 8">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/AlexEALA-Poster.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/SGA-1.jpg" alt="Advertisement Poster 9">
                         </div>
                         <div class="slide">
-                            <img src="Project-Three/SGA-1.jpg" alt="Publicity Poster 1">
+                            <img src="modals/advertisement-posters/Beckham-Poster.jpg" alt="Advertisement Poster 10">
+                        </div>
+                        <div class="slide">
+                            <img src="modals/advertisement-posters/Dak-Poster.jpg" alt="Advertisement Poster 11">
+                        </div>
+                        <div class="slide">
+                            <img src="modals/advertisement-posters/Doncic-Poster.jpg" alt="Advertisement Poster 12">
+                        </div>
+                        <div class="slide">
+                            <img src="modals/advertisement-posters/Faiyaz-1.jpg" alt="Advertisement Poster 13">
                         </div>
                     </div>
                     <button class="slider-button prev">&#10094;</button>
@@ -360,15 +370,379 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal" id="modal-uiux">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>UI/UX Designs</h2>
+
+                <!-- Selection Screen -->
+                <div class="year-selection" id="year-selection">
+                    <div class="modal-description">
+                        <p>Select a year to view UI/UX designs from that period.</p>
+                    </div>
+                    <div class="year-options">
+                        <button class="year-option" data-year="1st-2nd">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>1st - 2nd Year</span>
+                        </button>
+                        <button class="year-option" data-year="3rd">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>3rd Year</span>
+                        </button>
+                        <button class="year-option" data-year="4th">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>4th Year</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Category Selection for 3rd and 4th Year (Hidden by default) -->
+                <div class="category-selection" id="category-selection">
+                    <button class="back-button" id="back-to-year-selection">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Back to Year Selection</span>
+                    </button>
+                    <div class="category-explanation">
+                        <h3>Understanding the Difference</h3>
+                        <div class="explanation-content">
+                            <div class="explanation-item">
+                                <strong>User Experience (UX):</strong> Focuses on the overall feel and usability of a product. It's about understanding user needs, creating intuitive flows, and ensuring the product is easy and enjoyable to use.
+                            </div>
+                            <div class="explanation-item">
+                                <strong>User Interface (UI):</strong> Focuses on the visual design and aesthetics of a product. It's about creating beautiful, consistent, and visually appealing interfaces that users interact with.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-options" id="category-options">
+                        <!-- Categories will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <!-- Image Sliders (Hidden by default) -->
+                <div class="year-slider-container" id="year-slider-container">
+                    <button class="back-button" id="back-to-category">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Back to Categories</span>
+                    </button>
+
+                    <!-- 1st-2nd Year Slider -->
+                    <div class="image-slider year-slider" data-year="1st-2nd">
+                        <div class="slider-container">
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-1.png" alt="1st Year Design 1">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-2.png" alt="1st Year Design 2">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-3.png" alt="1st Year Design 3">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-4.png" alt="1st Year Design 4">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-5.png" alt="1st Year Design 5">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-6.png" alt="1st Year Design 6">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-7.png" alt="1st Year Design 7">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-8.png" alt="1st Year Design 8">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-9.png" alt="1st Year Design 9">
+                            </div>
+                            <div class="slide">
+                                <img src="modals/ui-ux-landing-pages/1st-2nd-year/1st-Year-10.png" alt="1st Year Design 10">
+                            </div>
+                        </div>
+                        <button class="slider-button prev">&#10094;</button>
+                        <button class="slider-button next">&#10095;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+
+                    <!-- 3rd Year - User Experience -->
+                    <div class="image-slider year-slider" data-year="3rd" data-category="ux">
+                        <div class="slider-container">
+                            <!-- Images will be loaded from modals/ui-ux-landing-pages/3rd-year/ux/ -->
+                        </div>
+                        <button class="slider-button prev">&#10094;</button>
+                        <button class="slider-button next">&#10095;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+
+                    <!-- 3rd Year - User Interface -->
+                    <div class="image-slider year-slider" data-year="3rd" data-category="ui">
+                        <div class="slider-container">
+                            <!-- Images will be loaded from modals/ui-ux-landing-pages/3rd-year/ui/ -->
+                        </div>
+                        <button class="slider-button prev">&#10094;</button>
+                        <button class="slider-button next">&#10095;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+
+                    <!-- 4th Year - User Experience -->
+                    <div class="image-slider year-slider" data-year="4th" data-category="ux">
+                        <div class="slider-container">
+                            <!-- Images will be loaded from modals/ui-ux-landing-pages/4th-year/ux/ -->
+                        </div>
+                        <button class="slider-button prev">&#10094;</button>
+                        <button class="slider-button next">&#10095;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+
+                    <!-- 4th Year - User Interface -->
+                    <div class="image-slider year-slider" data-year="4th" data-category="ui">
+                        <div class="slider-container">
+                            <!-- Images will be loaded from modals/ui-ux-landing-pages/4th-year/ui/ -->
+                        </div>
+                        <button class="slider-button prev">&#10094;</button>
+                        <button class="slider-button next">&#10095;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+
+                    <!-- 4th Year - Mobile View -->
+                    <div class="image-slider year-slider" data-year="4th" data-category="mobile">
+                        <div class="slider-container">
+                            <!-- Images will be loaded from modals/ui-ux-landing-pages/4th-year/mobile/ -->
+                        </div>
+                        <button class="slider-button prev">&#10094;</button>
+                        <button class="slider-button next">&#10095;</button>
+                        <div class="slider-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="tools" class="animate">
+            <div class="container">
+                <h2 class="section-title">Tools & Software</h2>
+                <div class="tools-grid">
+
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <i class="fa-solid fa-pen-fancy tool-icon-adobe"></i>
+                        </div>
+                        <h3>Adobe Photoshop <span class="tool-level">(Advanced Amateur)</span></h3>
+                        <p>5 years of experience using Photoshop for design, editing, and freelance projects.
+                            Comfortable with photo manipulation, compositing, and creating graphics for web and print.
+                        </p>
+                        <div class="tool-accent"></div>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <i class="fa-solid fa-sliders tool-icon-adobe"></i>
+                        </div>
+                        <h3>Adobe Lightroom <span class="tool-level">(Intermediate)</span></h3>
+                        <p>Experienced in photo editing, color correction, and enhancing images. Able to work
+                            efficiently with presets and adjustments to achieve professional results.</p>
+                        <div class="tool-accent"></div>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <i class="fa-brands fa-figma"></i>
+                        </div>
+                        <h3>Figma <span class="tool-level">(Intermediate)</span></h3>
+                        <p>Used extensively in college for web development projects, presentations, and prototype
+                            design. Comfortable with nodes, interactions, and creating functional UI flows.</p>
+                        <div class="tool-accent"></div>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <i class="fa-solid fa-palette tool-icon-canva"></i>
+                        </div>
+                        <h3>Canva <span class="tool-level">(Casual User)</span></h3>
+                        <p>Quick and efficient tool for presentations and simple graphics. Useful for fast edits and
+                            visual content, though Photoshop remains my primary tool.</p>
+                        <div class="tool-accent"></div>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3>DaVinci Resolve <span class="tool-level">(Beginner)</span></h3>
+                        <p>Used for video editing projects, familiar with basic editing, transitions, and effects.
+                            Currently practicing keyframes, motion tracking, and more advanced techniques.</p>
+                        <div class="tool-accent"></div>
+                    </div>
+
+                    <div class="tool-item">
+                        <div class="tool-icon">
+                            <i class="fa-brands fa-microsoft"></i>
+                        </div>
+                        <h3>Microsoft Office Suite <span class="tool-level">(Proficient)</span></h3>
+                        <p>Comfortable in Word, Excel, Publisher, and Access. Able to create documents, spreadsheets,
+                            and presentations for academic and professional purposes.</p>
+                        <div class="tool-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="internship" class="animate">
+            <div class="container">
+                <h2 class="section-title">Internship Experience</h2>
+                <div class="internship-content">
+                    <div class="internship-item">
+                        <div class="internship-header">
+                            <div class="internship-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <h3>Organique Inc. – Marketing & IT Support Intern</h3>
+                        </div>
+                        <div class="internship-body">
+                            <p>
+                                During my internship at Organique Inc., I had the opportunity to work with both the marketing and IT teams, giving me a well-rounded experience in a professional environment. On the marketing side, I created and edited photos and videos for campaigns, social media, and promotional materials, gaining hands-on experience in visual storytelling and content creation. 
+                            </p>
+                            <p>
+                                On the IT side, I assisted with basic technical support, helping to maintain systems and troubleshoot simple issues. This experience allowed me to understand how creative and technical aspects intersect in a real-world setting. Overall, the internship strengthened my skills in design, collaboration, and problem-solving while giving me insight into professional workflows and team dynamics.
+                            </p>
+                        </div>
+                        <div class="internship-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="education" class="animate">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-content">
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3>University of Caloocan City</h3>
+                        <p class="education-degree">Bachelor of Science in Information Systems (BSIS)</p>
+                        <div class="education-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="additional-tech" class="animate">
+            <div class="container">
+                <h2 class="section-title">IT Support & Networking Knowledge</h2>
+                <div class="tech-knowledge-content">
+                    <div class="tech-item">
+                        <div class="tech-header">
+                            <div class="tech-icon-wrapper">
+                                <div class="tech-icon">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </div>
+                                <div class="skill-badge">IT Support</div>
+                            </div>
+                            <div class="tech-title-section">
+                                <h3>Networking & Infrastructure</h3>
+                                <span class="skill-level">Fundamental Level</span>
+                            </div>
+                        </div>
+                        <p class="tech-intro">
+                            Gained hands-on experience with basic networking and IT infrastructure through academic activities and on-site exposure. 
+                            Familiar with how small to medium networks are structured, maintained, and troubleshooted.
+                        </p>
+                        <div class="tech-skills-grid">
+                            <div class="tech-skill-item">
+                                <div class="skill-item-icon">
+                                    <i class="fa-solid fa-diagram-project"></i>
+                                </div>
+                                <div class="skill-item-content">
+                                    <strong>Network Topologies</strong>
+                                    <p>Understanding of Star, Bus, Ring, Mesh, and Hybrid topologies and their real-world use cases.</p>
+                                </div>
+                            </div>
+                            <div class="tech-skill-item">
+                                <div class="skill-item-icon">
+                                    <i class="fa-solid fa-plug"></i>
+                                </div>
+                                <div class="skill-item-content">
+                                    <strong>LAN Cabling</strong>
+                                    <p>Crimping, testing, and troubleshooting Ethernet cables; identifying faulty connections and ports.</p>
+                                </div>
+                            </div>
+                            <div class="tech-skill-item">
+                                <div class="skill-item-icon">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <div class="skill-item-content">
+                                    <strong>Switch Configuration</strong>
+                                    <p>Basic setup and port management, connecting devices, and verifying network connectivity.</p>
+                                </div>
+                            </div>
+                            <div class="tech-skill-item">
+                                <div class="skill-item-icon">
+                                    <i class="fa-solid fa-computer"></i>
+                                </div>
+                                <div class="skill-item-content">
+                                    <strong>Server Handling</strong>
+                                    <p>Familiar with basic server setup, monitoring, and environment awareness.</p>
+                                </div>
+                            </div>
+                            <div class="tech-skill-item">
+                                <div class="skill-item-icon">
+                                    <i class="fa-solid fa-hard-drive"></i>
+                                </div>
+                                <div class="skill-item-content">
+                                    <strong>NAS Installation & Setup</strong>
+                                    <p>Assisting in deploying Network Attached Storage, user access configuration, and basic file sharing management.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tech-outro">
+                            While still at a foundational level, I am continuously improving my understanding of networking concepts, hardware, 
+                            and real-world troubleshooting through practice and guided supervision in my internship experience at Organique Inc by my supervisor, Mr. Nelson Campos Jr.
+                        </p>
+                        <div class="tech-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="core-skills" class="animate">
+            <div class="container">
+                <h2 class="section-title">Core & Soft Skills</h2>
+                <div class="skills">
+                    <div class="skill-tag">UI/UX Designer</div>
+                    <div class="skill-tag">Front-end Web Developer</div>
+                    <div class="skill-tag">Adobe Photoshop Proficient</div>
+                    <div class="skill-tag">Collaborative and Adaptable</div>
+                    <div class="skill-tag">Task & Time Management</div>
+                    <div class="skill-tag">Attention to Detail</div>
+                </div>
+            </div>
+        </section>
 
         <section id="contact" class="animate">
             <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="contact-intro">Interested in working together? Let's create something amazing.</p>
-                <div class="form-group">
-                    <a href="mailto:czyrillereyes@gmail.com?subject=Let's Work Together!">
-                        <button type="button">Email Me :></button>
-                    </a>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="form-group contact-email-group">
+                            <a href="mailto:czyrillereyes@gmail.com?subject=Let's Work Together!">
+                                <button type="button" class="contact-email-button">Email Me</button>
+                            </a>
+                        </div>
+                        <div class="contact-links">
+                            <a href="https://www.instagram.com/czyrll.jsh/" target="_blank" rel="noopener"
+                                class="contact-link">
+                                <i class="fa-brands fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://www.linkedin.com/in/reyes-czyrille-josh-c-42a686303/" target="_blank"
+                                rel="noopener" class="contact-link">
+                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -378,31 +752,45 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span>CJR</span>
-                    <p class="tagline">Graphics Designer & Web Developer</p>
+                    <div class="footer-logo-wrapper">
+                        <span class="footer-logo-text">CJR</span>
+                        <div class="footer-logo-accent"></div>
+                    </div>
+                    <p class="tagline">UI/UX Designer & Front-end Developer</p>
+                    <p class="footer-description">Creating digital experiences that blend creativity with functionality.</p>
                 </div>
 
                 <nav class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <div class="footer-nav-section">
+                        <h4>Navigation</h4>
+                        <div class="footer-nav-links">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#technical-skills">Skills</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#tools">Tools</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
                 </nav>
 
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook" class="social-icon">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/czyrll.jsh/" aria-label="Instagram" class="social-icon">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" aria-label="Behance" class="social-icon">
-                        <i class="fa-brands fa-behance"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/reyes-czyrille-josh-c-42a686303/" aria-label="LinkedIn"
-                        target="_blank" class="social-icon">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
+                <div class="footer-social-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/czyrll.jsh/" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Behance" class="social-icon" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/reyes-czyrille-josh-c-42a686303/" aria-label="LinkedIn"
+                            target="_blank" rel="noopener" class="social-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -420,12 +808,39 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         // Navbar Scroll Animation
+        let lastScroll = 0;
+        const header = document.querySelector("header");
+
         window.addEventListener("scroll", function () {
-            const header = document.querySelector("header");
+            const currentScroll = window.pageYOffset;
+
+            // Desktop behavior - add scrolled class
             if (window.scrollY > 50) {
                 header.classList.add("scrolled");
             } else {
                 header.classList.remove("scrolled");
+            }
+
+            // Mobile behavior - hide/show on scroll
+            if (window.innerWidth <= 768) {
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    // Scrolling down - hide header
+                    header.classList.add("header-hidden");
+                } else {
+                    // Scrolling up - show header
+                    header.classList.remove("header-hidden");
+                }
+            } else {
+                header.classList.remove("header-hidden");
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Handle window resize
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 768) {
+                header.classList.remove("header-hidden");
             }
         });
 
@@ -485,6 +900,33 @@
                     }
                 });
             }, 300);
+        }
+
+        // Hero Section Parallax Effect
+        const heroBackground = document.querySelector('.background-image');
+        if (heroBackground) {
+            window.addEventListener('scroll', function () {
+                const scrolled = window.pageYOffset;
+                const heroSection = document.querySelector('.hero');
+                if (heroSection) {
+                    const heroHeight = heroSection.offsetHeight;
+                    if (scrolled < heroHeight) {
+                        heroBackground.style.transform = `translateY(${scrolled * 0.5}px) scale(${1 + scrolled * 0.0005})`;
+                    }
+                }
+            });
+        }
+
+        // Add mouse move parallax effect to hero content
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) {
+            document.addEventListener('mousemove', function (e) {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                const moveX = (mouseX - 0.5) * 20;
+                const moveY = (mouseY - 0.5) * 20;
+                heroContent.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
         }
 
         // Smooth scrolling
@@ -567,34 +1009,87 @@
         const modals = document.querySelectorAll('.modal');
         const closeButtons = document.querySelectorAll('.close-modal');
 
-        // Initialize all image sliders
+        // Initialize all image sliders (including year sliders)
         const sliders = document.querySelectorAll('.image-slider');
-        sliders.forEach(initializeSlider);
+        if (sliders.length > 0) {
+            sliders.forEach(initializeSlider);
+        }
 
-        // Open modal when clicking on portfolio item
+        // Open modal when clicking or tapping on portfolio item
         portfolioItems.forEach(item => {
-            item.addEventListener('click', function () {
-                const modalId = this.getAttribute('data-modal');
+            let touchStartTime = 0;
+            let touchMoved = false;
+
+            // Handle click events
+            item.addEventListener('click', function (e) {
+                if (!touchMoved) {
+                    openModal(this);
+                }
+            });
+
+            // Handle touch events for mobile
+            item.addEventListener('touchstart', function (e) {
+                touchStartTime = Date.now();
+                touchMoved = false;
+            }, { passive: true });
+
+            item.addEventListener('touchmove', function (e) {
+                touchMoved = true;
+            }, { passive: true });
+
+            item.addEventListener('touchend', function (e) {
+                const touchDuration = Date.now() - touchStartTime;
+                if (!touchMoved && touchDuration < 300) {
+                    e.preventDefault();
+                    openModal(this);
+                }
+            });
+
+            function openModal(element) {
+                const modalId = element.getAttribute('data-modal');
                 const modal = document.getElementById(modalId);
 
                 if (modal) {
                     document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
                     modal.classList.add('active');
 
-                    // Reset slider position when opening modal
-                    const slider = modal.querySelector('.image-slider');
-                    if (slider) {
-                        const sliderContainer = slider.querySelector('.slider-container');
-                        sliderContainer.style.transform = 'translateX(0)';
+                    // Special handling for UI/UX modal - show selection screen
+                    if (modalId === 'modal-uiux') {
+                        const yearSelection = modal.querySelector('#year-selection');
+                        const categorySelection = modal.querySelector('#category-selection');
+                        const yearSliderContainer = modal.querySelector('#year-slider-container');
+                        const yearSliders = modal.querySelectorAll('.year-slider');
 
-                        // Reset active dot
-                        const dots = slider.querySelectorAll('.dot');
-                        dots.forEach((dot, index) => {
-                            dot.classList.toggle('active', index === 0);
+                        if (yearSelection) yearSelection.style.display = 'block';
+                        if (categorySelection) categorySelection.style.display = 'none';
+                        if (yearSliderContainer) {
+                            yearSliderContainer.style.display = 'none';
+                            yearSliderContainer.classList.remove('active');
+                        }
+                        yearSliders.forEach(slider => {
+                            slider.style.display = 'none';
+                            slider.classList.remove('active');
                         });
+                    } else {
+                        // Reset slider position when opening modal
+                        const slider = modal.querySelector('.image-slider');
+                        if (slider) {
+                            const sliderContainer = slider.querySelector('.slider-container');
+                            if (sliderContainer) {
+                                sliderContainer.style.transform = 'translateX(0)';
+
+                                // Reset active dot
+                                const dots = slider.querySelectorAll('.dot');
+                                dots.forEach((dot, index) => {
+                                    dot.classList.toggle('active', index === 0);
+                                });
+                            }
+                        }
                     }
+                } else {
+                    console.error('Modal not found:', modalId);
                 }
-            });
+            }
         });
 
         // Close modal when clicking close button
@@ -603,6 +1098,23 @@
                 const modal = this.closest('.modal');
                 modal.classList.remove('active');
                 document.body.style.overflow = ''; // Re-enable scrolling
+
+                // Reset UI/UX modal to selection screen
+                if (modal.id === 'modal-uiux') {
+                    const yearSelection = modal.querySelector('#year-selection');
+                    const yearSliderContainer = modal.querySelector('#year-slider-container');
+                    const yearSliders = modal.querySelectorAll('.year-slider');
+
+                    if (yearSelection) yearSelection.style.display = 'block';
+                    if (yearSliderContainer) {
+                        yearSliderContainer.style.display = 'none';
+                        yearSliderContainer.classList.remove('active');
+                    }
+                    yearSliders.forEach(slider => {
+                        slider.style.display = 'none';
+                        slider.classList.remove('active');
+                    });
+                }
             });
         });
 
@@ -612,9 +1124,272 @@
                 if (e.target === this) {
                     this.classList.remove('active');
                     document.body.style.overflow = ''; // Re-enable scrolling
+
+                    // Reset UI/UX modal to selection screen
+                    if (this.id === 'modal-uiux') {
+                        const yearSelection = this.querySelector('#year-selection');
+                        const yearSliderContainer = this.querySelector('#year-slider-container');
+                        const yearSliders = this.querySelectorAll('.year-slider');
+
+                        if (yearSelection) yearSelection.style.display = 'block';
+                        if (yearSliderContainer) yearSliderContainer.style.display = 'none';
+                        yearSliders.forEach(slider => slider.style.display = 'none');
+                    }
                 }
             });
         });
+
+        // Year selection for UI/UX modal
+        const yearOptions = document.querySelectorAll('.year-option');
+        yearOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                const selectedYear = this.getAttribute('data-year');
+                const modal = document.getElementById('modal-uiux');
+                const yearSelection = modal.querySelector('#year-selection');
+                const categorySelection = modal.querySelector('#category-selection');
+                const categoryOptions = modal.querySelector('#category-options');
+                const yearSliderContainer = modal.querySelector('#year-slider-container');
+
+                // Hide year selection
+                if (yearSelection) yearSelection.style.display = 'none';
+
+                // If 1st-2nd year, show slider directly
+                if (selectedYear === '1st-2nd') {
+                    if (categorySelection) categorySelection.style.display = 'none';
+                    const selectedSlider = modal.querySelector(`.year-slider[data-year="${selectedYear}"]`);
+                    
+                    if (yearSliderContainer) {
+                        yearSliderContainer.style.display = 'block';
+                        yearSliderContainer.classList.add('active');
+                    }
+                    const allSliders = modal.querySelectorAll('.year-slider');
+                    allSliders.forEach(slider => {
+                        slider.style.display = 'none';
+                        slider.classList.remove('active');
+                    });
+                    if (selectedSlider) {
+                        selectedSlider.style.display = 'block';
+                        selectedSlider.classList.add('active');
+                        initializeSliderView(selectedSlider);
+                    }
+                } else {
+                    // For 3rd and 4th year, show category selection
+                    if (categorySelection) {
+                        categorySelection.style.display = 'block';
+                        // Clear previous options
+                        if (categoryOptions) categoryOptions.innerHTML = '';
+                        
+                        // Define categories based on year
+                        const categories = selectedYear === '3rd' 
+                            ? [
+                                { name: 'User Experience', value: 'ux', icon: 'fa-solid fa-heart' },
+                                { name: 'User Interface', value: 'ui', icon: 'fa-solid fa-palette' }
+                            ]
+                            : [
+                                { name: 'User Experience', value: 'ux', icon: 'fa-solid fa-heart' },
+                                { name: 'User Interface', value: 'ui', icon: 'fa-solid fa-palette' },
+                                { name: 'Mobile View', value: 'mobile', icon: 'fa-solid fa-mobile-screen' }
+                            ];
+                        
+                        // Create category buttons
+                        categories.forEach(category => {
+                            const button = document.createElement('button');
+                            button.className = 'year-option';
+                            button.setAttribute('data-year', selectedYear);
+                            button.setAttribute('data-category', category.value);
+                            button.innerHTML = `
+                                <i class="${category.icon}"></i>
+                                <span>${category.name}</span>
+                            `;
+                            if (categoryOptions) categoryOptions.appendChild(button);
+                        });
+                    }
+                }
+            });
+        });
+
+        // Category selection handler (delegated event listener)
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.category-options .year-option')) {
+                const button = e.target.closest('.year-option');
+                const selectedYear = button.getAttribute('data-year');
+                const selectedCategory = button.getAttribute('data-category');
+                const modal = document.getElementById('modal-uiux');
+                const categorySelection = modal.querySelector('#category-selection');
+                const yearSliderContainer = modal.querySelector('#year-slider-container');
+                const selectedSlider = modal.querySelector(`.year-slider[data-year="${selectedYear}"][data-category="${selectedCategory}"]`);
+
+                // Hide category selection
+                if (categorySelection) {
+                    categorySelection.style.display = 'none';
+                    categorySelection.classList.remove('active');
+                }
+
+                // Load images for the selected category (only for 3rd and 4th year)
+                if (selectedSlider && (selectedYear === '3rd' || selectedYear === '4th')) {
+                    loadImagesForCategory(selectedSlider, selectedYear, selectedCategory);
+                }
+
+                // Show slider container and selected slider
+                if (yearSliderContainer) {
+                    yearSliderContainer.style.display = 'block';
+                    yearSliderContainer.classList.add('active');
+                }
+                const allSliders = modal.querySelectorAll('.year-slider');
+                allSliders.forEach(slider => {
+                    slider.style.display = 'none';
+                    slider.classList.remove('active');
+                });
+                if (selectedSlider) {
+                    selectedSlider.style.display = 'block';
+                    selectedSlider.classList.add('active');
+                    // Wait a bit for images to load before initializing
+                    setTimeout(() => {
+                        initializeSliderView(selectedSlider);
+                    }, 200);
+                }
+            }
+        });
+
+        // Image lists for each category - Automatically loaded from folders
+        const categoryImages = {
+            '3rd-ux': ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png', '11.png', '12.png', '13.png', '14.png', '15.png', '16.png', '17.png', '18.png'],
+            '3rd-ui': ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png'],
+            '4th-ux': ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png', '11.png'],
+            '4th-ui': ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
+            '4th-mobile': ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png']
+        };
+
+        // Function to load images from folder structure
+        function loadImagesForCategory(slider, year, category) {
+            const sliderContainer = slider.querySelector('.slider-container');
+            if (!sliderContainer) return;
+
+            // Build the folder path
+            const folderPath = `modals/ui-ux-landing-pages/${year}-year/${category}/`;
+            const imageKey = `${year}-${category}`;
+            
+            // Get image list for this category
+            const images = categoryImages[imageKey] || [];
+            
+            // Clear existing slides
+            sliderContainer.innerHTML = '';
+            
+            // If no images, show a message
+            if (images.length === 0) {
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+                slide.style.display = 'flex';
+                slide.style.alignItems = 'center';
+                slide.style.justifyContent = 'center';
+                slide.style.height = '500px';
+                const message = document.createElement('p');
+                message.style.color = 'var(--color-mid)';
+                message.style.fontSize = '1.1rem';
+                message.textContent = 'No images available for this category yet.';
+                slide.appendChild(message);
+                sliderContainer.appendChild(slide);
+            } else {
+                // Create slides for each image
+                images.forEach((imageName, index) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'slide';
+                    const img = document.createElement('img');
+                    img.src = folderPath + imageName;
+                    img.alt = `${year} Year ${category} Design ${index + 1}`;
+                    slide.appendChild(img);
+                    sliderContainer.appendChild(slide);
+                });
+            }
+            
+            // Re-initialize slider after loading images
+            setTimeout(() => {
+                // Remove old dots
+                const dotsContainer = slider.querySelector('.slider-dots');
+                if (dotsContainer) {
+                    dotsContainer.innerHTML = '';
+                }
+                
+                // Re-initialize slider if it has images
+                if (images.length > 0) {
+                    initializeSlider(slider);
+                }
+                initializeSliderView(slider);
+            }, 100);
+        }
+
+        // Helper function to initialize slider view
+        function initializeSliderView(slider) {
+            const sliderContainer = slider.querySelector('.slider-container');
+            if (sliderContainer) {
+                sliderContainer.style.transform = 'translateX(0)';
+                
+                // Reset active dot
+                const dots = slider.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === 0);
+                });
+            }
+        }
+
+        // Back button from slider to category/year selection
+        const backToCategory = document.getElementById('back-to-category');
+        if (backToCategory) {
+            backToCategory.addEventListener('click', function () {
+                const modal = document.getElementById('modal-uiux');
+                const yearSliderContainer = modal.querySelector('#year-slider-container');
+                const yearSliders = modal.querySelectorAll('.year-slider');
+                const selectedSlider = Array.from(yearSliders).find(slider => slider.style.display === 'block');
+                
+                // Check if we're viewing 1st-2nd year (no category) or 3rd/4th year (has category)
+                if (selectedSlider) {
+                    const year = selectedSlider.getAttribute('data-year');
+                    const category = selectedSlider.getAttribute('data-category');
+                    
+                    if (year === '1st-2nd') {
+                        // Go back to year selection
+                        const yearSelection = modal.querySelector('#year-selection');
+                        if (yearSelection) yearSelection.style.display = 'block';
+                    } else {
+                        // Go back to category selection
+                        const categorySelection = modal.querySelector('#category-selection');
+                        if (categorySelection) {
+                            categorySelection.style.display = 'block';
+                            categorySelection.classList.add('active');
+                        }
+                    }
+                }
+
+                // Hide slider container
+                if (yearSliderContainer) {
+                    yearSliderContainer.style.display = 'none';
+                    yearSliderContainer.classList.remove('active');
+                }
+                yearSliders.forEach(slider => {
+                    slider.style.display = 'none';
+                    slider.classList.remove('active');
+                });
+            });
+        }
+
+        // Back button from category to year selection
+        const backToYearSelection = document.getElementById('back-to-year-selection');
+        if (backToYearSelection) {
+            backToYearSelection.addEventListener('click', function () {
+                const modal = document.getElementById('modal-uiux');
+                const yearSelection = modal.querySelector('#year-selection');
+                const categorySelection = modal.querySelector('#category-selection');
+
+                // Show year selection
+                if (yearSelection) yearSelection.style.display = 'block';
+
+                // Hide category selection
+                if (categorySelection) {
+                    categorySelection.style.display = 'none';
+                    categorySelection.classList.remove('active');
+                }
+            });
+        }
 
         // Close modal on escape key
         document.addEventListener('keydown', function (e) {
