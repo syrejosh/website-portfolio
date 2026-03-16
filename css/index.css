@@ -194,6 +194,60 @@ nav.nav-menu {
     justify-content: flex-end;
 }
 
+.nav-link-resume {
+    position: relative;
+    overflow: hidden;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.25), transparent 55%),
+                radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.5), transparent 55%);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+    animation: resumePulse 2.2s ease-in-out infinite;
+}
+
+.nav-link-resume .nav-resume-text {
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nav-resume-glow {
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 0deg,
+        rgba(56, 189, 248, 0.1),
+        rgba(217, 249, 157, 0.7),
+        rgba(56, 189, 248, 0.1));
+    opacity: 0.75;
+    filter: blur(12px);
+    animation: resumeSweep 3s linear infinite;
+}
+
+.nav-link-resume:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 0 24px rgba(190, 242, 100, 0.9);
+}
+
+@keyframes resumePulse {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 26px rgba(190, 242, 100, 1);
+    }
+}
+
+@keyframes resumeSweep {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .nav-link {
     font-weight: 500;
     font-size: 0.95rem;
