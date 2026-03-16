@@ -2949,6 +2949,94 @@ nav.nav-menu {
     line-height: 1.7;
 }
 
+/* AI Workflow Section */
+#ai-workflow {
+    padding: 80px 0 100px;
+}
+
+.ai-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ai-intro p {
+    color: var(--color-mid);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.ai-intro p strong {
+    color: var(--color-light);
+}
+
+.ai-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.ai-tool-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ai-tool-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.ai-tool-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ai-tool-name {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.ai-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.ai-card {
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.ai-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--color-light);
+}
+
+.ai-card p {
+    color: var(--color-mid);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
 /* Before and After Image Comparison Slider */
 .comparison-slider-wrapper {
     position: relative;
@@ -3588,6 +3676,26 @@ footer::before {
     padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     gap: 20px;
+}
+
+.footer-resume-button {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--color-light);
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+
+.footer-resume-button:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
 }
 
 .copyright,

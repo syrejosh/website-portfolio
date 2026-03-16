@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume – Czyrille Josh C. Reyes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text: #1a1a1a;
+            --muted: #555;
+            --accent: #2563eb;
+            --border: #e5e7eb;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.45;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 28px 32px 32px;
+            background: #fff;
+        }
+        @media print {
+            body { padding: 16px 20px; }
+            .no-print { display: none !important; }
+        }
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+        .tagline {
+            font-size: 0.95rem;
+            color: var(--muted);
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 16px;
+            font-size: 9.5pt;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+        .contact a { color: var(--accent); text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .section {
+            margin-bottom: 18px;
+        }
+        .section-title {
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+        }
+        .summary p {
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .edu-item, .exp-item {
+            margin-bottom: 12px;
+        }
+        .edu-item:last-child, .exp-item:last-child { margin-bottom: 0; }
+        .edu-school, .exp-role {
+            font-weight: 600;
+            font-size: 10.5pt;
+        }
+        .edu-degree, .exp-meta {
+            color: var(--muted);
+            font-size: 9.5pt;
+            margin-top: 2px;
+        }
+        .exp-desc {
+            margin-top: 6px;
+            font-size: 9.8pt;
+        }
+        .exp-desc p { margin-bottom: 4px; }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+        }
+        .skills-list span {
+            background: #f1f5f9;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 9.5pt;
+            font-weight: 500;
+        }
+        .tools-list {
+            list-style: none;
+        }
+        .tools-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+            font-size: 9.8pt;
+        }
+        .tools-list .level { color: var(--muted); font-size: 9pt; }
+        .projects-list { list-style: none; }
+        .projects-list li {
+            padding: 4px 0;
+            font-size: 9.8pt;
+        }
+        .projects-list strong { font-weight: 600; }
+        .projects-list .desc { color: var(--muted); font-size: 9.2pt; margin-top: 2px; }
+        .print-hint {
+            text-align: center;
+            font-size: 9pt;
+            color: var(--muted);
+            margin-bottom: 16px;
+            padding: 8px;
+            background: #f8fafc;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <p class="print-hint no-print">💡 Use <strong>Ctrl+P</strong> (or Cmd+P) and “Save as PDF” to download your resume.</p>
+
+    <header>
+        <h1>Czyrille Josh C. Reyes</h1>
+        <p class="tagline">UI/UX Designer & Front-end Web Developer</p>
+        <div class="contact">
+            <span>📧 czyrillereyes@gmail.com</span>
+            <span>📱 +63 945 857 9617</span>
+            <a href="https://www.linkedin.com/in/czyrillereyes29/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/czyrll.jsh/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Summary</h2>
+        <div class="summary">
+            <p>BSIS student at the University of Caloocan City with a strong focus on UI/UX design, front-end web development, and digital media. I build responsive, user-centered interfaces and combine technical skills with design to create clear, functional digital experiences. Experienced in using AI tools (Claude, GPT, Cursor, Gemini) for prompting, coding, and design iteration.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-item">
+            <div class="edu-school">University of Caloocan City</div>
+            <div class="edu-degree">Bachelor of Science in Information Systems (BSIS)</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="exp-item">
+            <div class="exp-role">Marketing & IT Support Intern</div>
+            <div class="exp-meta">Organique Inc.</div>
+            <div class="exp-desc">
+                <p>Worked with marketing and IT teams in a professional setting. Created and edited photos and videos for campaigns, social media, and promotional materials. Provided basic technical support, system maintenance, and troubleshooting. Gained experience in design, collaboration, and problem-solving within real-world workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-list">
+            <span>HTML & CSS</span>
+            <span>Tailwind CSS</span>
+            <span>React.js</span>
+            <span>MySQL / phpMyAdmin</span>
+            <span>UI/UX & Responsive Design</span>
+            <span>Hosting & Deployment</span>
+            <span>Network Topologies</span>
+            <span>LAN Cabling</span>
+            <span>Switch Configuration</span>
+            <span>Server & NAS Basics</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Tools & Software</h2>
+        <ul class="tools-list">
+            <li><span>Adobe Photoshop</span> <span class="level">Advanced</span></li>
+            <li><span>Adobe Lightroom</span> <span class="level">Intermediate</span></li>
+            <li><span>Figma</span> <span class="level">Intermediate</span></li>
+            <li><span>Canva</span> <span class="level">Casual</span></li>
+            <li><span>DaVinci Resolve</span> <span class="level">Beginner</span></li>
+            <li><span>Microsoft Office (Word, Excel, Publisher, Access)</span> <span class="level">Proficient</span></li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Core & Soft Skills</h2>
+        <div class="skills-list">
+            <span>UI/UX Designer</span>
+            <span>Front-end Web Developer</span>
+            <span>Collaborative & Adaptable</span>
+            <span>Task & Time Management</span>
+            <span>Attention to Detail</span>
+            <span>Basic Networking & Troubleshooting</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Projects / Works</h2>
+        <ul class="projects-list">
+            <li>
+                <strong>Posters</strong>
+                <div class="desc">Visual poster designs and creative compositions.</div>
+            </li>
+            <li>
+                <strong>Advertisement Posters</strong>
+                <div class="desc">Promotional materials for campaigns and audience engagement.</div>
+            </li>
+            <li>
+                <strong>UI/UX Designs</strong>
+                <div class="desc">User-centered interfaces and prototypes (1st–4th year academic work).</div>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
