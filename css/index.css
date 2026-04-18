@@ -2424,15 +2424,17 @@ nav.nav-menu {
     max-width: 900px;
     margin: 0 auto;
     margin-top: 40px;
+    display: grid;
+    gap: 24px;
 }
 
 .education-item {
     position: relative;
-    padding: 40px;
+    padding: 34px 36px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
-    text-align: center;
+    text-align: left;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
 }
@@ -2460,12 +2462,12 @@ nav.nav-menu {
 }
 
 .education-icon {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2473,7 +2475,7 @@ nav.nav-menu {
 }
 
 .education-icon i {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--color-mid);
     transition: all 0.4s ease;
 }
@@ -2490,10 +2492,11 @@ nav.nav-menu {
 }
 
 .education-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 600;
     color: var(--color-light);
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
+    line-height: 1.35;
     transition: color 0.3s ease;
 }
 
@@ -2504,10 +2507,25 @@ nav.nav-menu {
 
 .education-degree {
     color: var(--color-mid);
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0 0 14px 0;
     transition: color 0.3s ease;
+}
+
+.education-year {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--color-light);
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
 }
 
 .education-item:hover .education-degree {
@@ -3989,20 +4007,30 @@ footer::before {
     }
 
     .education-item {
-        padding: 30px 25px;
+        padding: 26px 22px;
     }
 
     .education-icon {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
     }
 
     .education-icon i {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .education-item h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .education-degree {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .education-year {
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
     }
 
     .tech-item {

@@ -6,230 +6,422 @@
     <title>Resume – Czyrille Josh C. Reyes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --text: #1a1a1a;
-            --muted: #555;
-            --accent: #2563eb;
-            --border: #e5e7eb;
+            --text: #1a1a2e;
+            --muted: #4a4a68;
+            --accent: #0f3460;
+            --accent-light: #e8eef5;
+            --border: #e2e8f0;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'DM Sans', -apple-system, sans-serif;
-            font-size: 10.5pt;
-            line-height: 1.45;
+        @page { size: A4; margin: 12mm; }
+        html, body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            font-size: 9.5pt;
+            line-height: 1.35;
             color: var(--text);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 28px 32px 32px;
             background: #fff;
+            max-width: 210mm;
+            min-height: 100vh;
+            margin: 0 auto;
+            padding: 10px 14px 12px;
         }
+        .no-print { }
+        .back-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            font-size: 9pt;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .back-button:hover {
+            background: #0a2a4a;
+            transform: translateX(-2px);
+        }
+        .back-button svg { width: 16px; height: 16px; }
+        .download-word {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            background: #fff;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 9pt;
+            font-weight: 600;
+            border-radius: 6px;
+            border: 2px solid var(--accent);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .download-word:hover {
+            background: var(--accent);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        .download-word svg { width: 16px; height: 16px; flex-shrink: 0; }
+        .word-hint {
+            font-size: 8.5pt;
+            color: var(--muted);
+        }
+        .word-hint a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .word-hint a:hover { text-decoration: underline; }
         @media print {
-            body { padding: 16px 20px; }
+            html, body {
+                min-height: auto;
+                padding: 0;
+                font-size: 9pt;
+            }
             .no-print { display: none !important; }
+            .resume-page { box-shadow: none !important; }
         }
-        h1 {
-            font-size: 1.6rem;
+        .resume-page {
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 14px 18px 16px;
+            background: #fff;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .print-hint {
+            text-align: center;
+            font-size: 8.5pt;
+            color: var(--muted);
+            margin-bottom: 10px;
+            padding: 6px 10px;
+            background: var(--accent-light);
+            border-radius: 6px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 10px;
+        }
+        .header-left { flex: 1; min-width: 0; }
+        .header h1 {
+            font-size: 1.35rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 4px;
+            color: var(--accent);
+            margin-bottom: 2px;
         }
         .tagline {
-            font-size: 0.95rem;
+            font-size: 9pt;
             color: var(--muted);
             font-weight: 500;
-            margin-bottom: 14px;
+            margin-bottom: 8px;
         }
         .contact {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px 16px;
-            font-size: 9.5pt;
+            gap: 4px 12px;
+            font-size: 8.5pt;
             color: var(--muted);
-            margin-bottom: 20px;
         }
         .contact a { color: var(--accent); text-decoration: none; }
-        .contact a:hover { text-decoration: underline; }
-        .section {
-            margin-bottom: 18px;
+        .photo-wrap {
+            flex-shrink: 0;
+            width: 90px;
+            height: 90px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 2px solid var(--border);
+            background: var(--accent-light);
         }
-        .section-title {
-            font-size: 10pt;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--accent);
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 4px;
+        .photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+        }
+        .section {
             margin-bottom: 10px;
         }
-        .summary p {
-            color: var(--text);
+        .section-title {
+            font-size: 8.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #fff;
+            background: var(--accent);
+            padding: 4px 8px;
             margin-bottom: 6px;
+            border-radius: 3px;
         }
-        .edu-item, .exp-item {
-            margin-bottom: 12px;
+        .summary p, .exp-desc p {
+            font-size: 8.8pt;
+            margin-bottom: 3px;
+            color: var(--text);
         }
-        .edu-item:last-child, .exp-item:last-child { margin-bottom: 0; }
-        .edu-school, .exp-role {
-            font-weight: 600;
-            font-size: 10.5pt;
-        }
-        .edu-degree, .exp-meta {
-            color: var(--muted);
-            font-size: 9.5pt;
-            margin-top: 2px;
-        }
-        .exp-desc {
-            margin-top: 6px;
-            font-size: 9.8pt;
-        }
-        .exp-desc p { margin-bottom: 4px; }
+        .edu-school, .exp-role { font-weight: 600; font-size: 9pt; }
+        .edu-degree, .exp-meta { color: var(--muted); font-size: 8.2pt; margin-top: 1px; }
+        .exp-desc { margin-top: 4px; }
         .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px 10px;
+            gap: 4px 6px;
         }
         .skills-list span {
-            background: #f1f5f9;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 9.5pt;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 8pt;
             font-weight: 500;
         }
-        .tools-list {
-            list-style: none;
-        }
-        .tools-list li {
+        .tools-list, .projects-list { list-style: none; }
+        .tools-list li, .projects-list li {
+            padding: 2px 0;
+            font-size: 8.5pt;
             display: flex;
             justify-content: space-between;
-            padding: 3px 0;
-            font-size: 9.8pt;
+            gap: 8px;
         }
-        .tools-list .level { color: var(--muted); font-size: 9pt; }
-        .projects-list { list-style: none; }
-        .projects-list li {
-            padding: 4px 0;
-            font-size: 9.8pt;
-        }
+        .tools-list .level, .projects-list .desc { color: var(--muted); font-size: 7.8pt; flex-shrink: 0; }
         .projects-list strong { font-weight: 600; }
-        .projects-list .desc { color: var(--muted); font-size: 9.2pt; margin-top: 2px; }
-        .print-hint {
-            text-align: center;
-            font-size: 9pt;
-            color: var(--muted);
-            margin-bottom: 16px;
-            padding: 8px;
-            background: #f8fafc;
-            border-radius: 6px;
-        }
     </style>
 </head>
 <body>
-    <p class="print-hint no-print">💡 Use <strong>Ctrl+P</strong> (or Cmd+P) and “Save as PDF” to download your resume.</p>
-
-    <header>
-        <h1>Czyrille Josh C. Reyes</h1>
-        <p class="tagline">UI/UX Designer & Front-end Web Developer</p>
-        <div class="contact">
-            <span>📧 czyrillereyes@gmail.com</span>
-            <span>📱 +63 945 857 9617</span>
-            <a href="https://www.linkedin.com/in/czyrillereyes29/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://www.instagram.com/czyrll.jsh/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-    </header>
-
-    <section class="section">
-        <h2 class="section-title">Summary</h2>
-        <div class="summary">
-            <p>BSIS student at the University of Caloocan City with a strong focus on UI/UX design, front-end web development, and digital media. I build responsive, user-centered interfaces and combine technical skills with design to create clear, functional digital experiences. Experienced in using AI tools (Claude, GPT, Cursor, Gemini) for prompting, coding, and design iteration.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">Education</h2>
-        <div class="edu-item">
-            <div class="edu-school">University of Caloocan City</div>
-            <div class="edu-degree">Bachelor of Science in Information Systems (BSIS)</div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">Experience</h2>
-        <div class="exp-item">
-            <div class="exp-role">Marketing & IT Support Intern</div>
-            <div class="exp-meta">Organique Inc.</div>
-            <div class="exp-desc">
-                <p>Worked with marketing and IT teams in a professional setting. Created and edited photos and videos for campaigns, social media, and promotional materials. Provided basic technical support, system maintenance, and troubleshooting. Gained experience in design, collaboration, and problem-solving within real-world workflows.</p>
+    <div class="back-bar no-print">
+        <a href="index.html" class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to portfolio
+        </a>
+        <a href="#" class="download-word" id="download-docx-btn" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download .docx
+        </a>
+        <span class="word-hint">Downloads a Word document (.docx) you can open and edit in Microsoft Word.</span>
+    </div>
+    <p class="print-hint no-print">💡 <strong>Ctrl+P</strong> (or Cmd+P) → Save as PDF for a one-page resume.</p>
+    <div class="resume-page">
+        <header class="header">
+            <div class="header-left">
+                <h1>Czyrille Josh C. Reyes</h1>
+                <p class="tagline">UI/UX Designer & Front-end Web Developer</p>
+                <div class="contact">
+                    <span>czyrillereyes@gmail.com</span>
+                    <span>+63 945 857 9617</span>
+                    <a href="https://www.linkedin.com/in/czyrillereyes29/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.instagram.com/czyrll.jsh/" target="_blank" rel="noopener">Instagram</a>
+                </div>
             </div>
+            <div class="photo-wrap">
+                <img src="css/1by1.png" alt="Czyrille Josh C. Reyes">
+            </div>
+        </header>
+
+        <div class="grid">
+            <section class="section">
+                <h2 class="section-title">Summary</h2>
+                <div class="summary">
+                    <p>BSIS student at the University of Caloocan City focused on UI/UX design, front-end development, and digital media. I build responsive, user-centered interfaces and use AI tools (Claude, GPT, Cursor, Gemini) for prompting, coding, and design iteration.</p>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="edu-school">University of Caloocan City</div>
+                <div class="edu-degree">Bachelor of Science in Information Systems (BSIS)</div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Experience</h2>
+                <div class="exp-role">Marketing & IT Support Intern</div>
+                <div class="exp-meta">Organique Inc.</div>
+                <div class="exp-desc">
+                    <p>Worked with marketing and IT teams. Created and edited photos and videos for campaigns and social media. Provided technical support and troubleshooting. Gained experience in design, collaboration, and problem-solving.</p>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title">AI-Assisted Workflow</h2>
+                <div class="summary">
+                    <p>Daily use of Claude, GPT, Cursor, and Gemini for coding, debugging, and design. I write clear, structured prompts and maintain full understanding and control of the final output.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-list">
+                    <span>HTML & CSS</span>
+                    <span>Tailwind</span>
+                    <span>React.js</span>
+                    <span>MySQL</span>
+                    <span>UI/UX</span>
+                    <span>Hosting</span>
+                    <span>Networking</span>
+                    <span>LAN / NAS</span>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title">Tools & Software</h2>
+                <ul class="tools-list">
+                    <li><span>Adobe Photoshop</span> <span class="level">Advanced</span></li>
+                    <li><span>Adobe Lightroom</span> <span class="level">Intermediate</span></li>
+                    <li><span>Figma</span> <span class="level">Intermediate</span></li>
+                    <li><span>Canva · DaVinci Resolve</span> <span class="level">—</span></li>
+                    <li><span>Microsoft Office</span> <span class="level">Proficient</span></li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Core & Soft Skills</h2>
+                <div class="skills-list">
+                    <span>UI/UX Design</span>
+                    <span>Front-end Dev</span>
+                    <span>Collaborative</span>
+                    <span>Time Management</span>
+                    <span>Attention to Detail</span>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title">Projects</h2>
+                <ul class="projects-list">
+                    <li><strong>Posters</strong> <span class="desc">Visual & creative compositions</span></li>
+                    <li><strong>Advertisement Posters</strong> <span class="desc">Campaign & promo materials</span></li>
+                    <li><strong>UI/UX Designs</strong> <span class="desc">Interfaces & prototypes</span></li>
+                </ul>
+            </section>
         </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">AI-Assisted Workflow</h2>
-        <div class="summary">
-            <p>Comfortable using AI tools such as Claude, GPT, Cursor, and Gemini as part of my daily workflow for coding, debugging, and design exploration.</p>
-            <p>I write clear, structured prompts to break down problems, validate ideas, and improve code quality while still understanding and controlling the final output.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-list">
-            <span>HTML & CSS</span>
-            <span>Tailwind CSS</span>
-            <span>React.js</span>
-            <span>MySQL / phpMyAdmin</span>
-            <span>UI/UX & Responsive Design</span>
-            <span>Hosting & Deployment</span>
-            <span>Network Topologies</span>
-            <span>LAN Cabling</span>
-            <span>Switch Configuration</span>
-            <span>Server & NAS Basics</span>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">Tools & Software</h2>
-        <ul class="tools-list">
-            <li><span>Adobe Photoshop</span> <span class="level">Advanced</span></li>
-            <li><span>Adobe Lightroom</span> <span class="level">Intermediate</span></li>
-            <li><span>Figma</span> <span class="level">Intermediate</span></li>
-            <li><span>Canva</span> <span class="level">Casual</span></li>
-            <li><span>DaVinci Resolve</span> <span class="level">Beginner</span></li>
-            <li><span>Microsoft Office (Word, Excel, Publisher, Access)</span> <span class="level">Proficient</span></li>
-        </ul>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">Core & Soft Skills</h2>
-        <div class="skills-list">
-            <span>UI/UX Designer</span>
-            <span>Front-end Web Developer</span>
-            <span>Collaborative & Adaptable</span>
-            <span>Task & Time Management</span>
-            <span>Attention to Detail</span>
-            <span>Basic Networking & Troubleshooting</span>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">Projects / Works</h2>
-        <ul class="projects-list">
-            <li>
-                <strong>Posters</strong>
-                <div class="desc">Visual poster designs and creative compositions.</div>
-            </li>
-            <li>
-                <strong>Advertisement Posters</strong>
-                <div class="desc">Promotional materials for campaigns and audience engagement.</div>
-            </li>
-            <li>
-                <strong>UI/UX Designs</strong>
-                <div class="desc">User-centered interfaces and prototypes (1st–4th year academic work).</div>
-            </li>
-        </ul>
-    </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script>
+(function () {
+    function esc(s) {
+        if (!s) return '';
+        return String(s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
+    function p(text, bold) {
+        var rPr = bold ? '<w:rPr><w:b/></w:rPr>' : '';
+        return '<w:p><w:r>' + rPr + '<w:t xml:space="preserve">' + esc(text) + '</w:t></w:r></w:p>';
+    }
+    function heading(text) {
+        return '<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="20"/><w:color w:val="0F3460"/></w:rPr><w:t xml:space="preserve">' + esc(text) + '</w:t></w:r></w:p>';
+    }
+    function emptyP() {
+        return '<w:p><w:r><w:t></w:t></w:r></w:p>';
+    }
+    function buildDocumentXml() {
+        var body = [
+            '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">',
+            '<w:body>',
+            p('Czyrille Josh C. Reyes', true),
+            p('UI/UX Designer & Front-end Web Developer'),
+            p('czyrillereyes@gmail.com  |  +63 945 857 9617  |  LinkedIn  |  Instagram'),
+            emptyP(),
+            heading('Summary'),
+            p('BSIS student at the University of Caloocan City focused on UI/UX design, front-end development, and digital media. I build responsive, user-centered interfaces and use AI tools (Claude, GPT, Cursor, Gemini) for prompting, coding, and design iteration.'),
+            emptyP(),
+            heading('Education'),
+            p('University of Caloocan City', true),
+            p('Bachelor of Science in Information Systems (BSIS)'),
+            emptyP(),
+            heading('Experience'),
+            p('Marketing & IT Support Intern', true),
+            p('Organique Inc.'),
+            p('Worked with marketing and IT teams. Created and edited photos and videos for campaigns and social media. Provided technical support and troubleshooting. Gained experience in design, collaboration, and problem-solving.'),
+            emptyP(),
+            heading('AI-Assisted Workflow'),
+            p('Daily use of Claude, GPT, Cursor, and Gemini for coding, debugging, and design. I write clear, structured prompts and maintain full understanding and control of the final output.'),
+            emptyP(),
+            heading('Technical Skills'),
+            p('HTML & CSS, Tailwind, React.js, MySQL, UI/UX, Hosting, Networking, LAN / NAS'),
+            emptyP(),
+            heading('Tools & Software'),
+            p('Adobe Photoshop (Advanced), Adobe Lightroom (Intermediate), Figma (Intermediate), Canva, DaVinci Resolve, Microsoft Office (Proficient)'),
+            emptyP(),
+            heading('Core & Soft Skills'),
+            p('UI/UX Design, Front-end Dev, Collaborative, Time Management, Attention to Detail'),
+            emptyP(),
+            heading('Projects'),
+            p('Posters – Visual & creative compositions', true),
+            p('Advertisement Posters – Campaign & promo materials'),
+            p('UI/UX Designs – Interfaces & prototypes'),
+            '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440"/></w:sectPr>',
+            '</w:body>',
+            '</w:document>'
+        ].join('');
+        return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' + body;
+    }
+    var contentTypes = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+        '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+        '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>' +
+        '<Default Extension="xml" ContentType="application/xml"/>' +
+        '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>' +
+        '<Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/>' +
+        '<Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/>' +
+        '<Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/>' +
+        '</Types>';
+    var rels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+        '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+        '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>' +
+        '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/>' +
+        '<Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/>' +
+        '</Relationships>';
+    var docRels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+        '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+        '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>' +
+        '</Relationships>';
+    var styles = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+        '<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+        '<w:docDefaults><w:rPrDefault><w:rPr><w:sz w:val="22"/><w:szCs w:val="22"/></w:rPr></w:rPrDefault></w:docDefaults>' +
+        '<w:style w:type="paragraph" w:styleId="Heading2" w:name="Heading 2"><w:rPr><w:b/><w:sz w:val="20"/><w:color w:val="0F3460"/></w:rPr></w:style>' +
+        '</w:styles>';
+    var core = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+        '<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"><dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Resume – Czyrille Josh C. Reyes</dc:title><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Czyrille Josh C. Reyes</dc:creator></cp:coreProperties>';
+    var app = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+        '<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"><Application>Resume</Application></Properties>';
+    document.getElementById('download-docx-btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        var zip = new JSZip();
+        zip.file('[Content_Types].xml', contentTypes);
+        zip.file('_rels/.rels', rels);
+        zip.file('word/document.xml', buildDocumentXml());
+        zip.file('word/styles.xml', styles);
+        zip.file('word/_rels/document.xml.rels', docRels);
+        zip.file('docProps/core.xml', core);
+        zip.file('docProps/app.xml', app);
+        zip.generateAsync({ type: 'blob', mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' })
+            .then(function (blob) {
+                var a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = 'Czyrille-Josh-Reyes-Resume.docx';
+                a.click();
+                URL.revokeObjectURL(a.href);
+            });
+    });
+})();
+    </script>
 </body>
 </html>
